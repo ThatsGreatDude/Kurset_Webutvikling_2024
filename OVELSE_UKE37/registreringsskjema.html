@@ -6,9 +6,84 @@
         <title>Registrering</title>
     </head>
     <body>
+        <header>
+            <header>
+                <h1>Registreringsskjema</h1> <!-- Hovedoverskrift på siden, beskriver formålet -->
+            </header>
+        </header>
+<!--Putte in nav etterhvert-->
+
+
         <main>
-            <h1>Registreringsskjema</h1>
-            <form> <!--Liste elementer-->
+            <h2>Registrering</h2>
+            <form>
+                <label>
+                    Navn 
+                    <input type=""text" pattern="[A-Za-zæøåÆØÅ ]{2,}" required placeholder="Nora Nordman.."> 
+                </label>
+
+                <label>
+                    E-post 
+                    <input type="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required placeholder="eksempel@hiof.no"> 
+                </label>
+
+                <label>
+                    Passord 
+                    <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" minlength="8" required placeholder="******"> 
+                </label>
+
+                <label>
+                    Alder
+                    <input type="number" min="18" max="99" required> 
+                </label>
+
+                <label>
+                    Telefon
+                    <input type="tel" pattern="[0-9]{8,12}" required> 
+                </label>
+
+                <label>
+                    Fødselsdato
+                    <input type="date" max="2023-12-31" required> 
+                </label>
+
+                <fieldset>
+                    <legend>Kjønn</legend> 
+
+                    <label>
+                        Mann
+                        <input type="radio" name="gender" value="man"> 
+                    </label>
+
+                    <label>
+                        Kvinne
+                        <input type="radio" name="gender" value="female"> 
+                    </label>
+
+                    <label>
+                        Annet
+                        <input type="radio" name="gender" value="other"> 
+                    </label>
+                </fieldset>
+
+                <label>
+                    Land
+                    <select required> 
+                        <option value="">Velg et land</option> <!-- Placeholder-valg -->
+                        <option value="norge">Norge</option> <!-- Valgmulighet for Norge -->
+                        <option value="danmark">Danmark</option> <!-- Valgmulighet for Danmark -->
+                        <option value="sverige">Sverige</option> <!-- Valgmulighet for Sverige -->
+                    </select>
+                </label>
+
+                <label>
+                    Godkjenn personvern
+                    <input type="checkbox" required> 
+                </label>
+
+                <input type="submit" value="Send"> 
+            </form>
+            <!--<form> 
                 <label for="fname"> Fornavn: </label>
                 <input type="text" id="fname" name="fname">
 
@@ -32,21 +107,21 @@
                 <label for="birthday">Fødselsdato:</label>
                 <input type="date" id="birthday" name="birthday">
 
-                <!--Må justeres om til å gi mening-->
+              
                 <input type="radio" id="html" name="fav_language" value="HTML">
                 <label for="html">Dame</label>
                 <input type="radio" id="css" name="fav_language" value="CSS">
                 <label for="css">Mann</label>
                 <input type="radio" id="javascript" name="fav_language" value="JavaScript">
                 <label for="javascript">Annet</label>
-            </form>
+            </form
 
             <label for="land">Land:</label>
             <select name="land" id="land" form="land">
                 <option value="norge">Norge</option>
                 <option value="sverige">Sverige</option>
                 <option value="danmark">Danmark</option>
-            </select>
+            </select>-->
 
         </main>
     </body>
